@@ -1,0 +1,17 @@
+# Local settings and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+# Keep authorized project assets (including .pbix and .xlsx) trackable.
+# Review each uploaded source for personal/client data and licensing.
+
