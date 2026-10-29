@@ -1,17 +1,16 @@
-# Data-quality review checklist
+# Data-quality checklist — actual source files present
 
-No dataset has been uploaded or profiled. Record results here after examining real files.
+Uploaded datasets are now present, but **no comprehensive file-content or personal-data audit has been performed**. Original SQL source has been inspected at a text level only; its analytical results have not been executed or reconciled.
 
-| Check | Procedure / decision needed | Status |
+| Check | Action | Status |
 | --- | --- | --- |
-| Source rights and privacy | Confirm source licensing; remove personal/client records | Pending |
-| Key uniqueness | Evaluate distinct keys, duplicates and transaction grain | Pending |
-| Missing values | Profile nulls and blank strings in IDs, dates, prices | Pending |
-| Datatypes | Parse currency and locale-dependent dates carefully | Pending |
-| Relationships | Check orphaned records and accidental many-to-many joins | Pending |
-| Monetary calculations | Confirm tax, discounts, shipping, returns and refunds | Pending |
-| Time periods | Confirm timezone, date range and period filters | Pending |
-| Reconciliation | Compare cleaned rows, SQL outputs and report measures | Pending |
+| Public-sharing permissions | Confirm the right to publish each uploaded file | Pending |
+| Sensitive information | Check customer names, emails, phones, or private data | Pending |
+| Rows/field types | Profile actual dataset, sheet names, currency/date formats | Pending |
+| Primary/foreign key uniqueness | Check duplicates, orphans, grain | Pending |
+| Cleaning evidence | Record row count differences and transformation rules | Pending |
+| Financial business logic | Review discounts, returns, tax, cancellations and exclusions | Pending |
+| SQL execution | Review potentially destructive statements, run in dev | Pending |
+| Power BI validation | Refresh original PBIX and reconcile KPIs | Pending |
 
-Do not silently delete anomalies; document each rule and count before and after transformation.
-
+See [source review](ORIGINAL_SOURCE_REVIEW.md) and [manifest](ASSET_MANIFEST.md). Do not silently delete anomalies or report guessed results.

@@ -1,26 +1,17 @@
-# Setup and verification boundaries
+# Setup and reproduction plan — UrbanCart Sales & Customer Analytics
 
-Project: **UrbanCart Sales & Customer Analytics**
+**Inputs now available:** see [asset manifest](ASSET_MANIFEST.md). **None of the uploaded SQL/PBIX files has been runtime-validated here.**
 
-## Expected environment
-- SQL Server + SSMS for T-SQL
-- Power BI Desktop for the real PBIX file
-- Excel or Power Query for source profiling
-- Python 3.11+ for the static repository validator (standard library only)
+1. Review both Excel workbooks for provenance, personal data, sheet names, duplicates and transformations; confirm redistribution rights.
+2. Use a **new, disposable SQL Server database**. Open `sql/UrbanCartDataModelling.sql` and inspect each step, especially its `DELETE`, transaction and `CREATE TABLE` statements. Do not execute the entire script blindly.
+3. Only after verified staging, carefully review `sql/UrbanCartAnalysis.sql` for SQL Server queries, views and the `UPDATE Orders` transaction.
+4. The `sql/01_schema_contract.sql` and `sql/02_analysis_queries.sql` files were earlier **illustrative** and do not supersede the uploaded source schema or source code.
+5. Open the original `powerbi/UrbanCartDashboardPresntation.pbix` in Power BI Desktop, inspect model/DAX, update connections and test refresh.
+6. Compare the SQL outputs with Power BI totals and record actual findings only after successful verification. `docs/UrbanCart_Dashboard_Reference.html` is a separately supplied reference, not itself proof of PBIX output.
 
-## Steps
-1. Review [source and permissions](ASSET_MANIFEST.md) before publishing data.
-2. Inspect source column names, date parsing, primary keys, cardinality and currency conventions.
-3. Compare verified fields with [proposed SQL model](../sql/01_schema_contract.sql). Adapt examples to real data instead of changing source to fit the example.
-4. Import to a new **development** SQL Server database, not a production database. Review each statement before executing.
-5. Run relevant T-SQL. Reconcile row counts and KPI definitions with source.
-6. Open original PBIX in Power BI Desktop, review data connections, refresh, validate measures and capture screenshots only from real reports.
-7. Update [evidence](PROJECT_EVIDENCE.md), [metrics](METRICS.md), and [quality log](DATA_QUALITY.md).
-
-## Static check
+## Static validation
 ```bash
 python scripts/validate_repository.py
 ```
 
-GitHub Actions runs the same structure check. **It does not execute SQL Server, DAX, Power BI Desktop or validate numeric results.**
-
+The script checks required paths, zero-byte files, and simple relative Markdown links; it **does not run SQL Server or Power BI**, audit spreadsheet contents, or assert any measured KPI.

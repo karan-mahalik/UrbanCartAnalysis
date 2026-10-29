@@ -1,10 +1,9 @@
-# Power BI report
+# Power BI — original uploaded report
 
-Upload Karan's **original .pbix** file and, where possible, screenshots exported from a real working report. Do not generate fake screenshots or claim a successful refresh.
+- [UrbanCartDashboardPresntation.pbix](UrbanCartDashboardPresntation.pbix) — Uploaded Power BI report (original spelling kept)
 
-- [DAX_MEASURES.md](DAX_MEASURES.md): illustrative measures for a **proposed** model; not extracted from the original report.
-- On receipt of the .pbix: inspect tables, source paths, relationships, refresh steps, filters, DAX measures and page layout.
-- Compare visible KPI values to independently reviewed SQL results.
+The actual `.pbix` file is present. **Its report content, measures, data connections, filters and refresh behavior have not been validated.** No image should be described as a real report screenshot until obtained from the working report.
 
-**Current status:** No original .pbix uploaded or Power BI Desktop runtime validation performed.
+The existing [DAX_MEASURES.md](DAX_MEASURES.md) contains independently prepared **illustrative** DAX, not extracted measures from this PBIX. Reconcile after inspection.
 
+Use Power BI Desktop to inspect tables/relationships, update credentials/connections, refresh, compare KPIs to source SQL, and capture verified screenshots.

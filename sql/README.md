@@ -1,8 +1,18 @@
-# SQL Server analysis
+# SQL Server — original files and illustrative starters
 
-- [01_schema_contract.sql](01_schema_contract.sql) is a **commented proposed contract**, not original code or a migration.
-- [02_analysis_queries.sql](02_analysis_queries.sql) contains **illustrative read-only T-SQL** based on that proposed schema.
-- Upload Karan's original SQL scripts here, retaining original filenames and documenting their provenance.
+## Original uploaded SQL
 
-**Safety:** Review source schemas, NULLs, IDs, revenue conventions, duplicates and timezones first. Run any database setup on a **new development database**. No SQL Server execution has been performed as part of this GitHub setup.
+- [UrbanCartDataModelling.sql](UrbanCartDataModelling.sql) — Uploaded SQL Server schema/load script
+- [UrbanCartAnalysis.sql](UrbanCartAnalysis.sql) — Uploaded SQL Server analysis/views script
 
+## Previously prepared examples
+
+- [01_schema_contract.sql](01_schema_contract.sql) — **proposed** schema; not extracted from source.
+- [02_analysis_queries.sql](02_analysis_queries.sql) — **illustrative**, read-only example queries; not the uploaded original.
+- These examples must be adapted if used; original source structures take priority.
+
+## Safety and execution
+
+The uploaded `sql/UrbanCartDataModelling.sql` includes schema creation, loads and **DELETE/ROLLBACK/COMMIT** statements: inspect and execute only carefully selected sections in a disposable database. `sql/UrbanCartAnalysis.sql` includes SQL Server views and an `UPDATE Orders` transaction. The package's `docs/README.txt` mentions PostgreSQL/MySQL/SQLite, but the uploaded scripts contain **T-SQL-specific syntax**; treat SQL Server as the demonstrated dialect. No script was modified or executed.
+
+Use a disposable, isolated SQL Server database. Inspect each script before execution. This repository's GitHub Actions only checks file structure and links, **not** T-SQL syntax or runtime results. See [setup](../docs/SETUP.md).
