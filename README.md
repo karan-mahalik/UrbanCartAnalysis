@@ -1,5 +1,7 @@
 # UrbanCart Sales & Customer Analytics
 
+**🌐 Professional portfolio:** [Karan Mahalik — Data Analyst & Power BI Developer](https://karan-mahalik-portfolio.vercel.app/)
+
 **Excel · SQL Server · T-SQL · Power BI · DAX**
 
 Karan Mahalik's analytics project, now organized with its **uploaded source assets**, supporting materials, and independently authored documentation.
