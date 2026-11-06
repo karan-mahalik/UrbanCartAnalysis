@@ -6,7 +6,6 @@ An end-to-end data analytics project focused on understanding e-commerce sales p
 
 #### 1. UrbanCart Performance Dashboard – Overview
 
-![UrbanCart Dashboard Overview](assets/urbancart-dashboard-overview.png)
 
 This page provides an overview of business performance through key metrics and visualisations, including:
 
@@ -18,7 +17,6 @@ This page provides an overview of business performance through key metrics and v
 
 #### 2. Customer, Channel & Product Analysis
 
-![UrbanCart Customer and Product Analysis](assets/urbancart-dashboard-customer-analysis.png)
 
 This page provides a more detailed view of:
 
